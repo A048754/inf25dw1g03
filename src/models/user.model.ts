@@ -37,8 +37,7 @@ export class User extends Entity {
   @hasMany(() => Event)
   events: Event[];
 
-  @hasMany(() => Event)
-  UserRepository: Event[];
+
 
   constructor(data?: Partial<User>) {
     super(data);
