@@ -2,13 +2,13 @@ import {Entity, hasMany, model, property} from '@loopback/repository';
 import {Event} from './event.model';
 
 @model()
-export class Room extends Entity {
+export class User extends Entity {
   @property({
     type: 'number',
     id: true,
     generated: true,
   })
-  id: number;
+  id?: number;
 
   @property({
     type: 'string',
@@ -17,32 +17,36 @@ export class Room extends Entity {
   name: string;
 
   @property({
-    type: 'number',
+    type: 'string',
     required: true,
   })
-  capacity: number;
+  email: string;
 
   @property({
     type: 'string',
     required: true,
   })
-  building: string;
+  password: string;
 
   @property({
     type: 'string',
+    required: true,
   })
-  description?: string;
+  role: string;
 
   @hasMany(() => Event)
   events: Event[];
 
-  constructor(data?: Partial<Room>) {
+  @hasMany(() => Event)
+  UserRepository: Event[];
+
+  constructor(data?: Partial<User>) {
     super(data);
   }
 }
 
-export interface RoomRelations {
+export interface UserRelations {
   // describe navigational properties here
 }
 
-export type RoomWithRelations = Room & RoomRelations;
+export type UserWithRelations = User & UserRelations;

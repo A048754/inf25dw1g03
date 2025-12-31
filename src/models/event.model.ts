@@ -1,4 +1,8 @@
-import {Entity, model, property} from '@loopback/repository';
+import {belongsTo, Entity, hasMany, model, property} from '@loopback/repository';
+import {Booking} from './booking.model';
+import {Room} from './room.model';
+import {Tag} from './tag.model';
+import {User} from './user.model';
 
 @model()
 export class Event extends Entity {
@@ -21,18 +25,6 @@ export class Event extends Entity {
   description?: string;
 
   @property({
-    type: 'number',
-    required: true,
-  })
-  room_id: number;
-
-  @property({
-    type: 'number',
-    required: true,
-  })
-  tag_id: number;
-
-  @property({
     type: 'string',
     required: true,
   })
@@ -44,6 +36,17 @@ export class Event extends Entity {
   })
   end_datetime: string;
 
+  @belongsTo(() => Room)
+  roomId: number;
+
+  @belongsTo(() => Tag)
+  tagId: number;
+
+  @belongsTo(() => User)
+  userId: number;
+
+  @hasMany(() => Booking)
+  bookings: Booking[];
 
   constructor(data?: Partial<Event>) {
     super(data);

@@ -1,4 +1,5 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, hasMany, model, property} from '@loopback/repository';
+import {Event} from './event.model';
 
 @model()
 export class Tag extends Entity {
@@ -15,6 +16,8 @@ export class Tag extends Entity {
   })
   name: string;
 
+  @hasMany(() => Event)
+  events: Event[];
 
   constructor(data?: Partial<Tag>) {
     super(data);
