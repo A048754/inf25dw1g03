@@ -17,7 +17,7 @@ export class Tag extends Entity {
   name: string;
 
   @hasMany(() => Event)
-  events: Event[];
+  tagEvent: Event[];
 
   constructor(data?: Partial<Tag>) {
     super(data);
