@@ -35,9 +35,7 @@ export class User extends Entity {
   role: string;
 
   @hasMany(() => Event)
-  events: Event[];
-
-
+  userEvent: Event[];
 
   constructor(data?: Partial<User>) {
     super(data);

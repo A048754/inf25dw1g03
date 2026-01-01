@@ -7,13 +7,13 @@ import {
   Where,
 } from '@loopback/repository';
 import {
-  post,
-  param,
+  del,
   get,
   getModelSchemaRef,
+  param,
   patch,
+  post,
   put,
-  del,
   requestBody,
   response,
 } from '@loopback/rest';
@@ -23,8 +23,8 @@ import {TagRepository} from '../repositories';
 export class TagController {
   constructor(
     @repository(TagRepository)
-    public tagRepository : TagRepository,
-  ) {}
+    public tagRepository: TagRepository,
+  ) { }
 
   @post('/tags')
   @response(200, {

@@ -46,7 +46,7 @@ export class Event extends Entity {
   userId: number;
 
   @hasMany(() => Booking)
-  bookings: Booking[];
+  eventbooking: Booking[];
 
   constructor(data?: Partial<Event>) {
     super(data);
