@@ -16,8 +16,8 @@ import {
   requestBody,
 } from '@loopback/rest';
 import {
-  Room,
   Event,
+  Room,
 } from '../models';
 import {RoomRepository} from '../repositories';
 
@@ -42,7 +42,7 @@ export class RoomEventController {
     @param.path.number('id') id: number,
     @param.query.object('filter') filter?: Filter<Event>,
   ): Promise<Event[]> {
-    return this.roomRepository.room(id).find(filter);
+    return this.roomRepository.events(id).find(filter);
   }
 
   @post('/rooms/{id}/events', {
@@ -67,7 +67,7 @@ export class RoomEventController {
       },
     }) event: Omit<Event, 'id'>,
   ): Promise<Event> {
-    return this.roomRepository.room(id).create(event);
+    return this.roomRepository.events(id).create(event);
   }
 
   @patch('/rooms/{id}/events', {
@@ -90,7 +90,7 @@ export class RoomEventController {
     event: Partial<Event>,
     @param.query.object('where', getWhereSchemaFor(Event)) where?: Where<Event>,
   ): Promise<Count> {
-    return this.roomRepository.room(id).patch(event, where);
+    return this.roomRepository.events(id).patch(event, where);
   }
 
   @del('/rooms/{id}/events', {
@@ -105,6 +105,6 @@ export class RoomEventController {
     @param.path.number('id') id: number,
     @param.query.object('where', getWhereSchemaFor(Event)) where?: Where<Event>,
   ): Promise<Count> {
-    return this.roomRepository.room(id).delete(where);
+    return this.roomRepository.events(id).delete(where);
   }
 }

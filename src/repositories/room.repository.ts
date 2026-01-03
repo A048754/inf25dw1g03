@@ -1,7 +1,7 @@
-import {inject, Getter} from '@loopback/core';
-import {DefaultCrudRepository, repository, HasManyRepositoryFactory} from '@loopback/repository';
+import {Getter, inject} from '@loopback/core';
+import {DefaultCrudRepository, HasManyRepositoryFactory, repository} from '@loopback/repository';
 import {DbDataSource} from '../datasources';
-import {Room, RoomRelations, Event} from '../models';
+import {Event, Room, RoomRelations} from '../models';
 import {EventRepository} from './event.repository';
 
 export class RoomRepository extends DefaultCrudRepository<
@@ -10,13 +10,13 @@ export class RoomRepository extends DefaultCrudRepository<
   RoomRelations
 > {
 
-  public readonly room: HasManyRepositoryFactory<Event, typeof Room.prototype.id>;
+  public readonly events: HasManyRepositoryFactory<Event, typeof Room.prototype.id>;
 
   constructor(
     @inject('datasources.db') dataSource: DbDataSource, @repository.getter('EventRepository') protected eventRepositoryGetter: Getter<EventRepository>,
   ) {
     super(Room, dataSource);
-    this.room = this.createHasManyRepositoryFactoryFor('room', eventRepositoryGetter,);
-    this.registerInclusionResolver('room', this.room.inclusionResolver);
+    this.events = this.createHasManyRepositoryFactoryFor('events', eventRepositoryGetter,);
+    this.registerInclusionResolver('room', this.events.inclusionResolver);
   }
 }
