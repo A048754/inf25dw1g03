@@ -1,75 +1,82 @@
-# maia-campus-event
+# Maia Campus Event
 
-This application is generated using [LoopBack 4 CLI](https://loopback.io/doc/en/lb4/Command-line-interface.html) with the
-[initial project layout](https://loopback.io/doc/en/lb4/Loopback-application-layout.html).
+Repositorio del proyecto desarrollado para la asignatura **Desarrollo Web I**  
+Universidade da Maia – Curso 2025/2026  
 
-## Install dependencies
+Proyecto realizado por el **Grupo INF25DW1G03**:
+- Marcos Escribano Latorre
+- Ángel Parra García
+- Marcos Martínez
 
-By default, dependencies were installed when this application was generated.
-Whenever dependencies in `package.json` are changed, run the following command:
+---
 
-```sh
-npm install
-```
+## Descripción del proyecto
 
-To only install resolved dependencies in `package-lock.json`:
+**Maia Campus Event** es una aplicación web compuesta por una **API REST** y un **cliente de backoffice**
+destinada a la gestión de eventos en el Campus Universitario de Maia.
 
-```sh
-npm ci
-```
+El sistema permite organizar eventos, asignarlos a salas, clasificarlos mediante etiquetas y
+administrarlos de forma centralizada a través de una interfaz web, evitando conflictos de
+reservas y mejorando la gestión de recursos del campus.
 
-## Run the application
+---
 
-```sh
-npm start
-```
+## Organización del repositorio
 
-You can also run `node .` to skip the build step.
+El repositorio está organizado de la siguiente forma:
 
-Open http://127.0.0.1:3000 in your browser.
+- **/Backend/maia_campus_eventM3** → Código fuente de la API REST desarrollada con LoopBack 4  
+- **/Frontckend/maia_campus_event_m3_admin** → Cliente de backoffice desarrollado con React-Admin  
+- **/docs** → Documentación del proyecto (Markdown / PDF)  
+- **docker-compose.yml** → Configuración del entorno multi-contenedor  
+- **README.md** → Documentación principal del proyecto  
 
-## Rebuild the project
+---
 
-To incrementally build the project:
+## Tecnologías utilizadas
 
-```sh
-npm run build
-```
+### Lenguajes
+- JavaScript 
+- JSON
 
-To force a full build by cleaning up cached artifacts:
+### Tecnologías web
+- Node.js
+- REST API
 
-```sh
-npm run rebuild
-```
+### Base de datos
+- MySQL
 
-## Fix code style and formatting issues
+---
 
-```sh
-npm run lint
-```
+## Frameworks y librerías
 
-To automatically fix such issues:
+- **LoopBack 4** – Desarrollo de la API REST
+- **React-Admin** – Cliente web de backoffice
+- **Docker** – Contenedorización de la aplicación
+- **OpenAPI 3.0** – Documentación de la API
 
-```sh
-npm run lint:fix
-```
+---
 
-## Other useful commands
+## Documentación del proyecto
 
-- `npm run migrate`: Migrate database schemas for models
-- `npm run openapi-spec`: Generate OpenAPI spec into a file
-- `npm run docker:build`: Build a Docker image for this application
-- `npm run docker:run`: Run this application inside a Docker container
+- **C1 – Presentación del proyecto**  
+  Descripción del dominio del problema y objetivos del sistema.
 
-## Tests
+- **C2 – Recursos y relaciones**  
+  Descripción de los recursos de la API y sus relaciones.
 
-```sh
-npm test
-```
+- **C3 – Producto y arquitectura**  
+  Arquitectura general del sistema, contenedores y flujo de datos.
 
-## What's next
+---
 
-Please check out [LoopBack 4 documentation](https://loopback.io/doc/en/lb4/) to
-understand how you can continue to add features to this application.
+## Equipo de trabajo
+
+- Marcos Escribano Latorre  
+- Ángel Parra García  
+- Marcos Martínez
+
+
+
 
 [![LoopBack](https://github.com/loopbackio/loopback-next/raw/master/docs/site/imgs/branding/Powered-by-LoopBack-Badge-(blue)-@2x.png)](http://loopback.io/)
