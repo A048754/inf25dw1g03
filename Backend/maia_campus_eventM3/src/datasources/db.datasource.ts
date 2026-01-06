@@ -1,15 +1,18 @@
-import {inject, lifeCycleObserver, LifeCycleObserver} from '@loopback/core';
+import {lifeCycleObserver, LifeCycleObserver} from '@loopback/core';
 import {juggler} from '@loopback/repository';
 
 const config = {
   name: 'db',
   connector: 'mysql',
-  url: '',
-  host: 'localhost',
-  port: 3306,
-  user: 'root',
-  password: 'HornachegoPor_5',
-  database: 'CampusEventM3'
+
+  host: process.env.DB_HOST,
+  port: Number(process.env.DB_PORT),
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+
+  connectTimeout: 60000,
+  lazyConnect: true,
 };
 
 // Observe application's life cycle to disconnect the datasource when
@@ -20,12 +23,8 @@ const config = {
 export class DbDataSource extends juggler.DataSource
   implements LifeCycleObserver {
   static dataSourceName = 'db';
-  static readonly defaultConfig = config;
 
-  constructor(
-    @inject('datasources.config.db', {optional: true})
-    dsConfig: object = config,
-  ) {
-    super(dsConfig);
+  constructor() {
+    super(config);
   }
 }
