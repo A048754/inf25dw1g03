@@ -2,15 +2,16 @@ version: "3.9"
 
 services:
   mysql:
+    
     image: mysql:8
     container_name: campus-mysql
     environment:
       MYSQL_ROOT_PASSWORD: HornachegoPor_5
       MYSQL_DATABASE: CampusEventM3
-    #ports:
-     # - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+
 
   api:
     build: ./Backend/maia_campus_eventM3
