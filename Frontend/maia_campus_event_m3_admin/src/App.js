@@ -15,7 +15,7 @@ import EventIcon from "@mui/icons-material/Event";
 import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 
-const dataProvider = lb4Provider("http://localhost:3000");
+const dataProvider = lb4Provider("http://localhost:3005");
 
 export default function App() {
   return (
