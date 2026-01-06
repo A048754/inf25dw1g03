@@ -1,75 +1,52 @@
-# maia-campus-event
+My work assignment Title
+Repository to host the project developed for 'some class', a n^th^ year subject at SOMESCHOOL. Developed by Group ALPHA : @MarcoOliveira, [add others].
 
-This application is generated using [LoopBack 4 CLI](https://loopback.io/doc/en/lb4/Command-line-interface.html) with the
-[initial project layout](https://loopback.io/doc/en/lb4/Loopback-application-layout.html).
+Short theme description
+An example report using markdown on Github. This documentation is writen using Markdown. Here is a link to the basic syntax, but an extended syntax is also available. If you're starting with Markdown, you may want to try a Markdown Tutorial and read the getting started section.
 
-## Install dependencies
+Repository organization
+Please help reader navigate around describing how the repository is organized by providing links
 
-By default, dependencies were installed when this application was generated.
-Whenever dependencies in `package.json` are changed, run the following command:
+Source code is in the src folder.
+Report chapters are in doc folder.
+Initial OpenApi document
+Gallery
+Please provide a galery of the final result, with small images A table may be usefull to organize the images.
 
-```sh
-npm install
-```
+Technologies
+Indicate the technologies you have used in this assignment. Please provide links for the user to read more about those technologies.
 
-To only install resolved dependencies in `package-lock.json`:
+XML
+HTML5 + CSS3
+Javascript
+PHP
+nodeJS
+Any other?
+Frameworks and Libraries
+Did you use any aditional libraries? Describe them here.
 
-```sh
-npm ci
-```
+Docker
+Multipass
+NodeJS
+JQuery
+Laravel
+Bootstrap
+ReactJS
+Report
+Please add at least on section (a file) per Chapter. But you can add more.
 
-## Run the application
+Project presentation
+Chapter 1: Project presentation
+Resources
+Chapter 2: Resources
+Product
+Chapter 3: Product
+Presentation
+Chapter 4: Presentation
+Team
+Marco Amaro Oliveira @MarcoOliveira
+Other team members
 
-```sh
-npm start
-```
 
-You can also run `node .` to skip the build step.
-
-Open http://127.0.0.1:3000 in your browser.
-
-## Rebuild the project
-
-To incrementally build the project:
-
-```sh
-npm run build
-```
-
-To force a full build by cleaning up cached artifacts:
-
-```sh
-npm run rebuild
-```
-
-## Fix code style and formatting issues
-
-```sh
-npm run lint
-```
-
-To automatically fix such issues:
-
-```sh
-npm run lint:fix
-```
-
-## Other useful commands
-
-- `npm run migrate`: Migrate database schemas for models
-- `npm run openapi-spec`: Generate OpenAPI spec into a file
-- `npm run docker:build`: Build a Docker image for this application
-- `npm run docker:run`: Run this application inside a Docker container
-
-## Tests
-
-```sh
-npm test
-```
-
-## What's next
-
-Please check out [LoopBack 4 documentation](https://loopback.io/doc/en/lb4/) to
-understand how you can continue to add features to this application.
 
 [![LoopBack](https://github.com/loopbackio/loopback-next/raw/master/docs/site/imgs/branding/Powered-by-LoopBack-Badge-(blue)-@2x.png)](http://loopback.io/)
