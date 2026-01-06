@@ -1,27 +1,35 @@
 {
   "ids": {
-    "User": 4,
-    "Room": 1,
-    "Tag": 3,
-    "Booking": 2,
-    "Event": 2
+    "User": 6,
+    "Room": 4,
+    "Tag": 5,
+    "Booking": 4,
+    "Event": 4
   },
   "models": {
     "User": {
-      "1": "{\"id\":1,\"name\":\"Marcos Escribano Latorre\",\"email\":\"escribanolatorremarcos@gmail.com\",\"password\":\"********\",\"role\":\"estudiante\"}",
       "2": "{\"name\":\"Marcos Escribano Latorre\",\"email\":\"escribanolatorremarcos@gmail.com\",\"password\":\"********\",\"role\":\"estudi\",\"id\":2}",
-      "3": "{\"id\":3,\"name\":\"Angel Parra Garcia\",\"email\":\"A048754@umaia.pt\",\"password\":\"********\",\"role\":\"estudiante\"}"
+      "3": "{\"id\":3,\"name\":\"Angel Parra Garcia\",\"email\":\"A048754@umaia.pt\",\"password\":\"********\",\"role\":\"estudiante\"}",
+      "4": "{\"id\":4,\"name\":\"Angel\",\"email\":\"angel1234@email.com\",\"password\":\"2345\",\"role\":\"string\"}",
+      "5": "{\"name\":\"Marcos\",\"email\":\"marcos@email.com\",\"password\":\"5678\",\"role\":\"organizer\",\"id\":5}"
     },
-    "Room": {},
+    "Room": {
+      "1": "{\"name\":\"Room1\",\"capacity\":20,\"building\":\"Building1\",\"description\":\"Description1\",\"id\":1}",
+      "2": "{\"id\":2,\"name\":\"Room12.0\",\"capacity\":50,\"building\":\"Building2.0\",\"description\":\"Description2.0\"}"
+    },
     "Tag": {
       "1": "{\"name\":\"Programacion\",\"id\":1}",
-      "2": "{\"name\":\"string\",\"id\":2}"
+      "2": "{\"name\":\"string\",\"id\":2}",
+      "3": "{\"id\":3,\"name\":\"Music\"}"
     },
     "Booking": {
-      "1": "{\"eventId\":1,\"created_at\":\"13-12-2025\",\"id\":1}"
+      "1": "{\"eventId\":1,\"created_at\":\"13-12-2025\",\"id\":1}",
+      "3": "{\"eventId\":1,\"created_at\":\"02-03-2023\",\"id\":3}"
     },
     "Event": {
-      "1": "{\"title\":\"Hackaton\",\"description\":\"Principios basicos de la Ciberseguridad\",\"start_datetime\":\"14-12-2025\",\"end_datetime\":\"15-12-2025\",\"roomId\":1,\"tagId\":1,\"userId\":3,\"id\":1}"
+      "1": "{\"title\":\"Hackaton\",\"description\":\"Principios basicos de la Ciberseguridad\",\"start_datetime\":\"14-12-2025\",\"end_datetime\":\"15-12-2025\",\"roomId\":1,\"tagId\":1,\"userId\":3,\"id\":1}",
+      "2": "{\"title\":\"Title2\",\"description\":\"Description2\",\"start_datetime\":\"01-02-2023\",\"end_datetime\":\"02-02-2023\",\"roomId\":1,\"tagId\":1,\"userId\":1,\"id\":2}",
+      "3": "{\"title\":\"UserEvent\",\"description\":\"DescriptionUserEvent\",\"start_datetime\":\"01-02-2022\",\"end_datetime\":\"02-02-2022\",\"roomId\":1,\"tagId\":1,\"userId\":1,\"id\":3}"
     }
   }
 }

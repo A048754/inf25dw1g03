@@ -34,7 +34,7 @@ export class Room extends Entity {
   description?: string;
 
   @hasMany(() => Event)
-  events: Event[];
+  room: Event[];
 
   constructor(data?: Partial<Room>) {
     super(data);

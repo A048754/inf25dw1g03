@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  mysql:
+    image: mysql:8
+    container_name: campus-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: HornachegoPor_5
+      MYSQL_DATABASE: CampusEventM3
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  api:
+    build: .
+    container_name: campus-api
+    depends_on:
+      - mysql
+    environment:
+      DB_HOST: mysql
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASSWORD: HornachegoPor_5
+      DB_NAME: CampusEventM3
+    ports:
+      - "3000:3000"
+
+volumes:
+  mysql_data:
